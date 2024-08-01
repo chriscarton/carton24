@@ -1,11 +1,21 @@
 @import './intro.css';
 @import './pub.css';
+@import './cafe.css';
+@import './interactive.css';
+@import './contact.css';
+
+:root{
+	--spacing:25px;
+}
 
 body{
 	background:white;
 	padding:0px;
 	margin:0px;
 	font-family: 'Jost';
+}
+*{
+	line-height: 1;
 }
 html{
 	scroll-behavior:smooth;
@@ -24,7 +34,7 @@ section{
 	max-width:1200px;
 	margin-left: auto;
 	margin-right: auto;
-	border:2px dashed black;
+	/* border:2px dashed black; */
 }
 #titrePrincipal{
 	font-weight: 900;
@@ -34,16 +44,25 @@ section{
 	line-height: 100%;
 }
 
-section.banniere{
+.banniere{
 	min-height:auto;
 	font-family: 'Jost';
-	font-weight: 900;
+	font-weight: 700;
 	background:black;
 	color:white;
+	font-size: clamp(36px,10vw,256px);
+	font-size: clamp(36px,7.5vw,128px);
+	font-size: clamp(36px,5vw,128px);
+	text-align: center;
+	line-height: 1;	
+	padding-block:var(--spacing);
 }
 
 
-.btn{
+
+.btn,
+input[type=submit]
+{
 	all:unset;
 	background:black;
 	color:white;
@@ -96,3 +115,4 @@ section.banniere{
 			left: 100%;
 	}
 }
+

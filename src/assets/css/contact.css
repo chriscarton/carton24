@@ -1,0 +1,85 @@
+#Contact{
+	background-image: url('/assets/img/texture-carton-1.jpg');
+	background-size:50%;
+	background-repeat: repeat;
+	position:relative;
+	overflow:hidden;
+	/* min-height: auto; */
+}
+
+#Contact > svg{
+	position:absolute;
+	z-index: 0;
+	transform:rotate(-15deg) scale(1.20);
+}
+
+#Contact .conteneur{
+	position:relative;
+	z-index: 1;
+	/* border:5px dashed yellow; */
+	min-height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#Contact .titre{
+	font-size: clamp(36px,10vw,256px);
+	color:white;
+	text-wrap:balance;
+	text-align: center;
+	margin-block:var(--spacing);
+	text-shadow:5px 5px 5px rgba(0,0,0,0.25);
+}
+
+#Contact form{
+	min-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap:var(--spacing);
+	border: var(--spacing);
+}
+
+#Contact input,
+#Contact textarea{
+	display:block;
+	padding:var(--spacing);
+	padding:15px;
+	border-radius:var(--spacing);
+	border-radius:15px;
+	font-size: 1rem;
+	font-family: 'Jost';
+	border:0px;
+	/* border:2px solid black; */
+}
+
+
+#Contact input:focus,
+#Contact textarea:focus{
+	/* border:5px dashed black; */
+	outline:0px;
+	/* font-size: 1.2rem; */
+}
+
+#Contact textarea{
+	min-height: 150px;
+}
+
+#Contact .conteneur-btn{
+	text-align: center;
+}
+
+
+#Contact input[type=submit]{
+	margin-left: auto;
+	margin-right: auto;
+	border:5px solid transparent;
+	&:hover{
+		border:5px solid white;
+		cursor:pointer;
+	}
+}

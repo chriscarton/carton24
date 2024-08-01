@@ -1,0 +1,17 @@
+#Cafe{
+	text-align: center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	gap:25px;
+	padding:25px;
+	/* min-height: 150vh; */
+	img{
+		max-width: 400px;
+		height:auto;
+	}
+	.message{
+		max-width: 800px;
+		line-height: 1;
+	}
+}

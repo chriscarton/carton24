@@ -1,0 +1,28 @@
+
+.message{
+	font-size: clamp(36px,7.5vw,128px);
+	font-weight: 700;
+	margin:0px;
+	text-wrap: balance;
+}
+.reaction{
+	display:none;
+}
+
+
+.reponses{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	gap:25px;
+}
+.reponses button{
+	all:unset;
+	font-size: clamp(36px,7.5vw,128px);
+	font-weight: 600;
+	color:silver;
+	&:hover{
+		color:goldenrod;
+		cursor:pointer;
+	}
+}

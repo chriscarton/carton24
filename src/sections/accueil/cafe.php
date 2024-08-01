@@ -1,5 +1,7 @@
 <section id="Cafe">
-	<img src="/assets/img/cafetiere.png" alt="cafetiere">
+	<div>
+		<img src="/assets/img/cafetiere.png" alt="cafetiere">
+	</div>
 	<p class="message">Voulez-vous un café ?</p>
 	<div class="reponses">
 		<button class="reponse">oui</button>
