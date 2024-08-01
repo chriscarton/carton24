@@ -1,0 +1,16 @@
+body{
+	background:white;
+	padding:0px;
+	margin:0px;
+}
+section{
+	min-height:100vh;
+}
+
+section.banniere{
+	min-height:auto;
+	font-family: 'Jost';
+	font-weight: 900;
+	background:black;
+	color:white;
+}
