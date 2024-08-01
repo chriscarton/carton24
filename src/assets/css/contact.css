@@ -16,7 +16,6 @@
 #Contact .conteneur{
 	position:relative;
 	z-index: 1;
-	/* border:5px dashed yellow; */
 	min-height: 100vh;
 	display:flex;
 	align-items: center;

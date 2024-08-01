@@ -3,9 +3,12 @@
 @import './cafe.css';
 @import './interactive.css';
 @import './contact.css';
+@import './carte.css';
+@import './footer.css';
 
 :root{
 	--spacing:25px;
+	--golden:#AB9277;
 }
 
 body{
