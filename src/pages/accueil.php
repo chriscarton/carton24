@@ -1,4 +1,9 @@
 <?php require('./sections/accueil/intro.php'); ?>
+<div class="decoupe">
+	<?php require('./assets/svg/ciseaux.svg'); ?>
+
+	<hr>
+</div>
 <?php require('./sections/accueil/pub.php'); ?>
 <div class="banniere">
 	NE BOUGEZ PAS

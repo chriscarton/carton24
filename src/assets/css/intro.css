@@ -1,0 +1,82 @@
+
+#Intro{
+	padding-inline:25px;
+	display:flex;
+	flex:1;
+}
+
+.presentation{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	gap:25px;
+}
+
+.presentation .col{
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:25px;
+
+}
+
+
+.presentation img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.presentation .conteneur-menu{
+	align-items: center;
+}
+
+#menuPrincipal a,
+#menuPrincipal a:link,
+#menuPrincipal a:hover,
+#menuPrincipal a:focus,
+#menuPrincipal a:visited,
+#menuPrincipal a:active{
+	text-transform: uppercase;
+	color:silver;
+	display:block;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.presentation__texte{
+	font-family: 'Goudy Bookletter 1911';
+	font-size: 36px;
+	text-wrap:pretty;
+}
+
+
+#Intro .ligne.ligne-bas{
+	display:flex;
+	flex-direction: row;	
+	flex:1;
+	gap:25px;
+}
+#Intro .ligne.ligne-bas .conteneur-svg{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ligne-bas .col{
+	flex:1;
+}
+
+.ligne-bas .disponibilites{
+	font-size: 24px;
+	font-weight: 600;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
+.ligne-bas .disponibilites b{
+	font-size: 48px;
+	font-weight: 900;
+}

@@ -9,19 +9,5 @@
 		</title>
 		<meta name="description" content="Webdesigner expérimenté, j'allie créativité et expertise technique pour créer votre site internet de A à Z.">
 		<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-
-		<?php 
-		/*
-			Comme je fais beaucoup de tests, 
-			je veux inclure des styles spécifiques à chaque page
-		*/
-		if(!empty($requested_page)){
-			if(file_exists("./assets/css/page/{$requested_page}.css")):
-			?>
-				<link rel="stylesheet" href="/assets/css/page/<?= $requested_page ?>.css" type="text/css">
-			<?php
-			endif;
-		}
-		?>
 	</head>
 <body>
