@@ -12,15 +12,15 @@
 					Designer graphique et développeur web freelance, je crée des sites internet de qualité qui font le bonheur de mes clients.
 				</div>
 				<div class="conteneur-btn">
-					<button class="btn">
-					<?php require('./assets/svg/mail.svg'); ?>
-					contact
-					</button>
+					<a class="btn" href="#Contact">
+						<?php require('./assets/svg/mail.svg'); ?>
+						contact
+					</a>
 				</div>
 			</div>
 
 			<div class="col">
-				<img src="/assets/img/portrait.jpg" width="400" height="533" alt="Portrait Chris Carton / Webdesigner">
+				<img src="/assets/img/portrait.jpg" alt="Portrait Chris Carton / Webdesigner">
 			</div>
 
 			<div class="col conteneur-menu">

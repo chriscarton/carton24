@@ -18,18 +18,19 @@
 	z-index: 1;
 	min-height: 100vh;
 	display:flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
+	gap:var(--spacing);
 }
 
 #Contact .titre{
-	font-size: clamp(36px,10vw,256px);
+	font-size: var(--title2);
+	max-width: 800px;
 	color:white;
 	text-wrap:balance;
 	text-align: center;
-	margin-block:var(--spacing);
-	text-shadow:5px 5px 5px rgba(0,0,0,0.25);
+	text-shadow:var(--textShadow);
 }
 
 #Contact form{
@@ -53,15 +54,12 @@
 	font-size: 1rem;
 	font-family: 'Jost';
 	border:0px;
-	/* border:2px solid black; */
 }
 
 
 #Contact input:focus,
 #Contact textarea:focus{
-	/* border:5px dashed black; */
 	outline:0px;
-	/* font-size: 1.2rem; */
 }
 
 #Contact textarea{
@@ -76,9 +74,7 @@
 #Contact input[type=submit]{
 	margin-left: auto;
 	margin-right: auto;
-	border:5px solid transparent;
 	&:hover{
-		border:5px solid white;
 		cursor:pointer;
 	}
 }

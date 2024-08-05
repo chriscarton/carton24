@@ -1,0 +1,65 @@
+.conteneur-decoupe{
+	position:relative;
+}
+.decoupe{
+	/* min-height: 100px; */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position:absolute;
+}
+.decoupe hr {
+	border: 0;
+	border-top: 5px dashed black;
+	height: 0;
+	width: 100%;
+	margin:0px;
+}
+.decoupe svg{
+	overflow:visible;
+	width:102px;
+	height:102px; 
+	position:absolute;
+	animation: moveRight 5s linear infinite;
+	/* ok cette animation fonctionne ! */
+}
+
+#ciseau-1{
+	/* transform:rotate(45deg); */
+	transform-origin:center;
+	animation:ciseauAnim 0.5s linear alternate infinite;
+}
+
+
+
+@keyframes ciseauAnim{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(45deg);
+	}
+}
+
+#ciseau-2{
+	transform-origin:center;
+	animation:ciseauAnim2 0.5s linear alternate infinite ;
+}
+
+@keyframes ciseauAnim2{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(-45deg);
+	}
+}
+
+@keyframes moveRight {
+	0% {
+			left: 0;
+	}
+	100% {
+			left: 100%;
+	}
+}

@@ -1,0 +1,32 @@
+.conteneur-btn{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn,
+input[type=submit]
+{
+	all:unset;
+	background:black;
+	color:white;
+	font-weight: 400;
+	font-size: var(--btnTextSize);
+	border-radius: 50px;
+	display:flex;
+	align-items: center;
+	padding:10px 20px;
+	gap:5px;
+	text-transform: uppercase;
+	border:3px solid transparent;
+	transition:background 0.5s ease-out;
+}
+.btn:hover{
+	color:black;
+	background:white;
+	border:3px solid black;
+	cursor:pointer;
+	svg path{
+		fill:black;
+	}
+}

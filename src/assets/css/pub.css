@@ -1,57 +1,39 @@
-#Pub{
-	/* background:silver; */
-}
-#Pub .titre{
-	position:relative;
-	z-index: 5;
-	color:black;
-	font-size: clamp(36px,10vw,128px);
-	text-align: center;
-	max-width: 800px;
-	line-height: 1;
-  text-wrap: balance;
-	margin:0px;
-	transform:translateY(-20%);
-	/* transform:translateY(-25%); */
-
-}
-#Pub svg{
-	max-width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#Pub .composition{
-	position:relative;
-	flex:1;
-	display: flex;
+#Pub2{
+	padding-block:calc(var(--spacing)*2);
+	background:gold;
+	display:flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	/* border:5px dashed rebeccapurple; */
-
-	img{
-		position:absolute;
-	}
-
-	.ordinateur{
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		z-index:1;
-		max-width: 1000px;
-		bottom:100px;
-		
-	}
-	.table{
-		align-self: flex-end;
-		object-fit: contain;
-		object-position: center center;
-		width: 100%;
-	}
+	justify-content: center; 
 }
-
-@media screen and (min-width:1600px){
-	.ordinateur{
-		max-width: 1200px;
-	}
+.ordinateur{
+	max-width: 1200px; 
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; 
+}
+.ecran-ordinateur {
+	border:15px solid black;
+	border-radius:25px;
+	background:white;	
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;	
+	max-width: 82%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	aspect-ratio: 16/9;
+}
+img.base-ordinateur{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+	height:auto;
+	/* background-image:url('/assets/img/base-ordinateur.png'); */
+	/* width:1200px; */
+	/* height:90px; */
 }

@@ -3,9 +3,8 @@
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	gap:25px;
-	padding:25px;
-	/* min-height: 150vh; */
+	gap:var(--spacing);
+	padding:var(--spacing);
 	img{
 		max-width: 400px;
 		height:auto;

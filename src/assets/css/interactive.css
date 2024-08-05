@@ -1,6 +1,6 @@
 
 .message{
-	font-size: clamp(36px,7.5vw,128px);
+	font-size: var(--title2);
 	font-weight: 700;
 	margin:0px;
 	text-wrap: balance;
@@ -14,11 +14,11 @@
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction: row;
-	gap:25px;
+	gap:var(--spacing);
 }
 .reponses button{
 	all:unset;
-	font-size: clamp(36px,7.5vw,128px);
+	font-size: var(--title2);
 	font-weight: 600;
 	color:silver;
 	&:hover{

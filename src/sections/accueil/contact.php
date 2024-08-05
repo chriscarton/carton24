@@ -5,7 +5,10 @@
 			<textarea name="projet" placeholder="Alors voilà..."></textarea>
 			<input type="email" placeholder="adresse@email.com">
 			<div class="conteneur-btn">
-				<input type="submit" value="envoyer">
+				<button type="submit" class="btn">
+					<?php require('./assets/svg/send.svg'); ?>
+					Envoyer
+				</button>
 			</div>
 		</form>
 	</div>

@@ -1,8 +1,8 @@
-<section id="Pub">
-		<?php require('./assets/svg/separateur.svg'); ?>
-		<div class="composition">
-			<h1 class="titre">Besoin d'un site internet ?</h1>
-			<img src="/assets/img/ordinateur.png" class="ordinateur" alt="ordinateur">
-			<img src="/assets/img/table.png" class="table" alt="table">
+<div id="Pub2">
+	<div class="ordinateur">
+		<div class="ecran-ordinateur">
+			<div class="message">Besoin d'un site internet ?</div>
 		</div>
-</section>
+		<img class="base-ordinateur" src="/assets/img/base-ordinateur.png" alt="">
+	</div>
+</div>

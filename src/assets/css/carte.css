@@ -14,7 +14,7 @@
 }
 
 #Carte .titre{
-	font-size: clamp(36px,7.5vw,128px);
+	font-size: var(--title2);
 	color:var(--golden);
 	text-wrap:balance;
 	max-width: 600px;
@@ -27,5 +27,4 @@
 	background-position: center bottom;
 	background-repeat:no-repeat;
 	inset:0;
-	
 }
