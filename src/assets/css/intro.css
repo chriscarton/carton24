@@ -79,6 +79,20 @@
 	justify-content: center;
 }
 
+#Intro .ligne.ligne-bas svg{
+	animation:upAndDown 1s steps(5) infinite alternate-reverse;
+}
+
+
+@keyframes upAndDown{
+	from{
+		transform:translateY(0%);
+	}
+	to{
+		transform:translateY(25%);
+	}
+}
+
 .ligne-bas .col{
 	flex:1;
 }

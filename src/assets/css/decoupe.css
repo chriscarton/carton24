@@ -1,13 +1,14 @@
 .conteneur-decoupe{
 	position:relative;
+	z-index: 9999;
 }
 .decoupe{
-	/* min-height: 100px; */
 	width: 100%;
 	display: flex;
 	align-items: center;
 	position:absolute;
 }
+
 .decoupe hr {
 	border: 0;
 	border-top: 5px dashed black;
@@ -21,11 +22,9 @@
 	height:64px; 
 	position:absolute;
 	animation: moveRight 5s linear infinite;
-	/* ok cette animation fonctionne ! */
 }
 
 #ciseau-1{
-	/* transform:rotate(45deg); */
 	transform-origin:center;
 	animation:ciseauAnim 0.5s steps(5) alternate infinite;
 }

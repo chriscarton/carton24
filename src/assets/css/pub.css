@@ -1,4 +1,4 @@
-#Pub2{
+#Pub{
 	padding-block:calc(var(--spacing)*2);
 	background-color:white;
 	display:flex;
@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: center; 
 	min-height:100vh;
+	position:relative;
 }
 .ordinateur{
 	max-width: 1000px; 
@@ -13,6 +14,40 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center; 
+	position:relative;
+}
+
+.svg-container{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	transform:translate(50%,-50%);
+}
+
+.svg-container #Asterisque {
+	max-width: 100px;
+	max-height:90px;
+	aspect-ratio: 10/9;
+	animation: rotationAsterisque 5s steps(20) infinite;
+	transform-origin: center center;
+	display: block;
+	margin:0px;
+}
+
+@keyframes rotationAsterisque {
+	from {
+			transform: rotate(0deg);
+	}
+	to {
+			transform: rotate(360deg);
+	}
+}
+
+.notice{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	font-family: 'Goudy Bookletter 1911';
 }
 
 
@@ -25,7 +60,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;	
-	max-width: 82%;
+	width: 82%;
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
