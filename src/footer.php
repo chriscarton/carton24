@@ -1,15 +1,4 @@
-<?php
-	/*
-		Comme je fais beaucoup de tests, 
-		je veux inclure des scripts spécifiques à chaque page
-	*/
-	if(!empty($requested_page)){
-		if(file_exists("./assets/js/page/{$requested_page}.js")):
-		?>
-			<script src="/assets/js/page/<?= $requested_page ?>.js"></script>
-		<?php
-		endif;
-	}
-?>
+<script src="/assets/js/typewriter-effect.2.3.1.js"></script>
+<script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -3,8 +3,7 @@
 	padding-inline:var(--spacing);
 	display:flex;
 	flex:1;
-	background:orange;
-	background-image:url('/assets/img/texture-papier-2.jpg');
+	background:white;
 }
 
 .presentation{
@@ -51,6 +50,14 @@
 	display:block;
 	font-size: var(--textSize);
 	font-weight: bold;
+	transition:all 0.25s ease-in;
+	text-decoration: none;
+}
+
+#menuPrincipal a:hover{
+	cursor:pointer;
+	color:black;
+	text-decoration: underline;
 }
 
 .presentation__texte{

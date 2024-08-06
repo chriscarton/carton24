@@ -4,7 +4,7 @@
 
 		<div class="presentation">
 
-			<div class="col col-1">
+			<div class="col col-1" data-animation="fadeInDown">
 				<div class="conteneur-svg">
 					<?php require('./assets/svg/fleche-1.svg'); ?>
 				</div>
@@ -19,11 +19,11 @@
 				</div>
 			</div>
 
-			<div class="col">
+			<div class="col" data-animation="fadeInUp" data-delay="1000">
 				<img src="/assets/img/portrait.jpg" alt="Portrait Chris Carton / Webdesigner">
 			</div>
 
-			<div class="col conteneur-menu">
+			<div class="col conteneur-menu" data-animation="fadeIn" data-delay="2000">
 				<nav id="menuPrincipal">
 					<a href="#">Articles</a>
 					<a href="#">Offres</a>
@@ -36,10 +36,10 @@
 
 		<div class="ligne ligne-bas">
 			<div class="col"></div>
-			<div class="col conteneur-svg">
+			<div class="col conteneur-svg" data-animation="fadeInDown" data-delay="3500">
 				<a href="#Pub"><?php require('./assets/svg/fleche-2.svg'); ?></a>
 			</div>
-			<div class="col disponibilites">
+			<div class="col disponibilites" data-animation="fadeIn" data-delay="4000">
 				<div>
 					Disponible en <br>
 					<b>SEP 24</b>

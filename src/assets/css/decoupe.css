@@ -17,8 +17,8 @@
 }
 .decoupe svg{
 	overflow:visible;
-	width:102px;
-	height:102px; 
+	width:64px;
+	height:64px; 
 	position:absolute;
 	animation: moveRight 5s linear infinite;
 	/* ok cette animation fonctionne ! */
@@ -27,7 +27,7 @@
 #ciseau-1{
 	/* transform:rotate(45deg); */
 	transform-origin:center;
-	animation:ciseauAnim 0.5s linear alternate infinite;
+	animation:ciseauAnim 0.5s steps(5) alternate infinite;
 }
 
 
@@ -43,7 +43,7 @@
 
 #ciseau-2{
 	transform-origin:center;
-	animation:ciseauAnim2 0.5s linear alternate infinite ;
+	animation:ciseauAnim2 0.5s steps(5) alternate infinite ;
 }
 
 @keyframes ciseauAnim2{

@@ -1,3 +1,4 @@
+@import './animations.css';
 @import './intro.css';
 @import './btn.css';
 @import './decoupe.css';
@@ -54,6 +55,18 @@ section{
 	margin:0px;
 	text-align: center;
 	line-height: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	/* flex-direction: column; */
+	/* height:100vh; */
+	transition:height 1s ease-in;
+}
+
+
+
+.hauteur-originale{
+	
 }
 
 .banniere{
