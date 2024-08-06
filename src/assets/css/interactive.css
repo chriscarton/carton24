@@ -8,15 +8,24 @@
 .reaction{
 	display:none;
 }
+.reaction.visible{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap:var(--spacing);
+}
 
 
 .reponses{
+	display:none;
+}
+.reponses.visible{
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction: row;
 	gap:var(--spacing);
 }
-.reponses button{
+.reponses .reponse{
 	all:unset;
 	font-size: var(--title2);
 	font-weight: 600;
@@ -25,4 +34,8 @@
 		color:goldenrod;
 		cursor:pointer;
 	}
+}
+
+.reponses .reponse.reponse-choisie{
+	color:goldenrod;
 }

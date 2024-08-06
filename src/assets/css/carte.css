@@ -21,6 +21,10 @@
 	text-align: center;
 }
 
+#Carte .conteneur-btn{
+	padding-block:var(--spacing);
+}
+
 #Carte .overlay{
 	position:absolute;
 	background-image: url('/assets/img/main-carte.png');

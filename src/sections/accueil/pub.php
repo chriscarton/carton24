@@ -8,5 +8,5 @@
 		</div>
 		<img class="base-ordinateur" src="/assets/img/base-ordinateur.png" alt="">
 	</div>
-	<p class="notice">*Ordinateur non inclus&nbsp;!</p>
+	<p class="notice">*&nbsp;Ordinateur non inclus&nbsp;!&nbsp;</p>
 </div>

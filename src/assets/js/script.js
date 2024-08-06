@@ -86,6 +86,34 @@ function animerLesElements(entry){
 	}
 }
 
+// S'il y en a ! 
+function afficherLesReponses(message){
+	if(message){
+		let nextElement = message.nextElementSibling;
+		if(nextElement){
+			if(nextElement.classList.contains('reponses')){
+				nextElement.classList.add('visible');
+
+				let reponses = nextElement.querySelectorAll('.reponse');
+				if(reponses){
+					reponses.forEach(function(reponse){
+						reponse.addEventListener('click',function(){
+							reponse.classList.add('reponse-choisie');
+							let dataReponse = reponse.getAttribute('data-reponse');
+							let reactionElement = document.querySelector('[data-reaction="' + dataReponse + '"]');
+							if (reactionElement) {
+								reactionElement.classList.add('visible');
+								// reactionElement.click();
+							}
+						});
+					});
+				}
+
+			}
+		}
+	}
+}
+
 function taperLesMessages(entry){
 	let messages = entry.target.querySelectorAll('.message');
 	if(messages){
@@ -100,7 +128,7 @@ function taperLesMessages(entry){
 			typewriter.typeString(textContent)
 			.callFunction(() => {
 				message.querySelector('.Typewriter__cursor').remove();
-				
+				afficherLesReponses(message);
 			})
 			.start();
 		
