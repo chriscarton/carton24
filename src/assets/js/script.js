@@ -26,29 +26,31 @@ function shiftEffect(element) {
 function taperChrisCarton(){
 
 	let titrePrincipal = document.querySelector("#titrePrincipal");
-	let hauteurOriginale = titrePrincipal.getBoundingClientRect().height;
-	titrePrincipal.style.height = '100vh';
-	let textContent = titrePrincipal.textContent.trim();
 
-	let typewriter = new Typewriter(titrePrincipal, {
-			delay: 150,
-			cursor: "|"
-	});
+	if(titrePrincipal){
+		let hauteurOriginale = titrePrincipal.getBoundingClientRect().height;
+		titrePrincipal.style.height = '100vh';
+		let textContent = titrePrincipal.textContent.trim();
 
-	typewriter.typeString(textContent)
-	.callFunction(() => {
-		titrePrincipal.querySelector('.Typewriter__cursor').remove();
-		titrePrincipal.style.height = hauteurOriginale+'px';
-		titrePrincipal.addEventListener('transitionend',function(){
-			
-			observerSections();
-
+		let typewriter = new Typewriter(titrePrincipal, {
+				delay: 150,
+				cursor: "|"
 		});
-	})
-	.start();
 
-	titrePrincipal.classList.add('visible');
+		typewriter.typeString(textContent)
+		.callFunction(() => {
+			titrePrincipal.querySelector('.Typewriter__cursor').remove();
+			titrePrincipal.style.height = hauteurOriginale+'px';
+			titrePrincipal.addEventListener('transitionend',function(){
+				
+				observerSections();
 
+			});
+		})
+		.start();
+
+		titrePrincipal.classList.add('visible');
+	}
 }
 /*
 function taperAutresMessages(){

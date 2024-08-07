@@ -1,5 +1,5 @@
 <section id="Intro" class="part">
-	<h1 id="titrePrincipal">CHRIS CARTON</h1>
+	<h1 id="titrePrincipal">CHRIS <br class="mobile-only"> CARTON</h1>
 	<div class="presentation">
 		<div class="col col-1" data-animation="fadeInDown">
 			<div class="conteneur-svg">

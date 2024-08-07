@@ -1,0 +1,9 @@
+# Faire et tester d'autres photos... 
+
+# Adaptations responsives
+
+bon déjà qu'est-ce qui cause l'overflow...
+
+# Placer une sections réalisations
+
+# Cacher le menu pour l'instant...

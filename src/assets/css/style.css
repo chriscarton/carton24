@@ -26,7 +26,7 @@ body{
 	padding:0px;
 	margin:0px;
 	font-family: 'Jost';
-	overflow-x:hidden;
+	/* overflow-x:hidden; */
 }
 *{
 	line-height: 1;
@@ -49,6 +49,7 @@ section{
 	margin-left: auto;
 	margin-right: auto;
 }
+
 #titrePrincipal{
 	font-weight: 900;
 	font-size: var(--title1);
@@ -60,6 +61,8 @@ section{
 	justify-content: center;
 	transition:height 1s ease-in;
 }
+
+
 
 .banniere{
 	min-height:auto;

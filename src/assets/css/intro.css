@@ -13,13 +13,13 @@
 	gap:var(--spacing);
 }
 
+
 .presentation .col{
 	flex:1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap:var(--spacing);
-
 }
 
 
@@ -37,6 +37,13 @@
 
 .presentation .conteneur-menu{
 	align-items: center;
+	display:none;
+}
+
+@media screen and (min-width: 768px) {
+	.presentation .conteneur-menu{
+		display:block;
+	}
 }
 
 #menuPrincipal a,
@@ -47,11 +54,13 @@
 #menuPrincipal a:active{
 	text-transform: uppercase;
 	color:silver;
-	display:block;
 	font-size: var(--textSize);
 	font-weight: bold;
 	transition:all 0.25s ease-in;
 	text-decoration: none;
+	/* display:block; */
+	display:none;
+
 }
 
 #menuPrincipal a:hover{
@@ -69,10 +78,17 @@
 
 #Intro .ligne.ligne-bas{
 	display:flex;
-	flex-direction: row;	
+	flex-direction: column;	
 	flex:1;
 	gap:var(--spacing);
 }
+
+@media screen and (min-width:768px){
+	#Intro .ligne.ligne-bas{
+		flex-direction: row;
+	}
+}
+
 #Intro .ligne.ligne-bas .conteneur-svg{
 	display:flex;
 	align-items: center;
@@ -104,6 +120,7 @@
 	align-items: center;
 	justify-content: center;
 	line-height: 1;
+	margin-bottom:var(--spacing);
 }
 .ligne-bas .disponibilites b{
 	font-size: var(--textSize);
