@@ -99,6 +99,15 @@ function afficherLesReponses(message){
 					reponses.forEach(function(reponse){
 						reponse.addEventListener('click',function(){
 							reponse.classList.add('reponse-choisie');
+
+							// Désactive les autres réponses
+							reponses.forEach(function(otherReponse) {
+								if (otherReponse !== reponse) {
+									otherReponse.setAttribute('disabled', 'true');
+								}
+							});
+
+							// Déclenche éventuellement une réaction...
 							let dataReponse = reponse.getAttribute('data-reponse');
 							let reactionElement = document.querySelector('[data-reaction="' + dataReponse + '"]');
 							if (reactionElement) {

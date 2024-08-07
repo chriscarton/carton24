@@ -13,8 +13,8 @@
 	--spacing:25px;
 	--golden:#AB9277;
 	--title1:clamp(36px,10vw,256px);
-	--title2:clamp(36px,7.5vw,128px);
-	--title3:clamp(36px,5vw,128px);
+	--title2:clamp(36px,5vw,96px);
+	--title3:clamp(36px,3vw,64px);
 	--textSize:clamp(20px,3vw,36px);
 	--btnTextSize:clamp(18px,2vw,22px);
 	--smallTextSize:clamp(16px,1vw,24px);
@@ -58,15 +58,7 @@ section{
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	/* flex-direction: column; */
-	/* height:100vh; */
 	transition:height 1s ease-in;
-}
-
-
-
-.hauteur-originale{
-	
 }
 
 .banniere{
