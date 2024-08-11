@@ -24,13 +24,31 @@
 	padding-block:var(--spacing);
 }
 
-#Contact .titre{
+#Contact .titre, 
+#Contact .confirmation{
 	font-size: var(--title2);
 	max-width: 800px;
 	color:white;
 	text-wrap:balance;
 	text-align: center;
 	text-shadow:var(--textShadow);
+}
+
+#Contact #contactConfirmation{
+	display:none;
+	transition:all 1s ease-in-out;
+	opacity:0;
+	transform:translateY(25px);
+}
+
+#Contact #contactConfirmation.visible{
+	opacity:1;
+	transform:translateY(0px);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap:var(--spacing);
 }
 
 #Contact form{
@@ -77,4 +95,28 @@
 	&:hover{
 		cursor:pointer;
 	}
+}
+@keyframes avionAnimation {
+	0% {
+			transform: translate(0px, 0px) rotate(0deg);
+	}
+	20% {
+			transform: translate(8px, -4px) rotate(1deg);
+	}
+	40% {
+			transform: translate(-6px, 6px) rotate(-1deg);
+	}
+	60% {
+			transform: translate(4px, 8px) rotate(1deg);
+	}
+	80% {
+			transform: translate(-8px, -6px) rotate(-1deg);
+	}
+	100% {
+			transform: translate(0px, 0px) rotate(0deg);
+	}
+}
+
+#superAvionEnPapier {
+	animation: avionAnimation 10s infinite ease-in-out;
 }
