@@ -1,12 +1,19 @@
 #Cafe{
+	overflow-x: hidden;
 	text-align: center;
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	gap:var(--spacing);
 	padding:var(--spacing);
+	> div:first-child{
+		/* 
+			Pour créer un petit décalage vers la droite pour que la cafetière apparaisse centrée (alors qu'en fait, elle ne l'est pas !) 
+		*/
+		transform:translateX(20px);
+	}
 	img{
-		max-width: 400px;
+		max-width: clamp(200px,100%,350px);
 		height:auto;
 	}
 	.message{

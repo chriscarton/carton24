@@ -152,6 +152,11 @@ function observerSections(){
 	// add interaction observer to sections
 	if(parts){
 		parts.forEach(part => {
+
+			const options = {
+				threshold: 0.5 // Trigger callback when 50% of the target is visible
+			};
+
 			const observer = new IntersectionObserver(entries => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
@@ -162,7 +167,7 @@ function observerSections(){
 					}
 					
 				});
-			});
+			},options);
 
 			observer.observe(part);
 		});

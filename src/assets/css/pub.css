@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: center; 
 	position:relative;
+	gap:var(--spacing);
 
 }
 
@@ -58,10 +59,15 @@
 }
 
 #Pub .notice{
-	position:absolute;
-	right:0px;
-	bottom:0px;
 	font-family: 'Goudy Bookletter 1911';
+}
+
+@media screen and (min-width:768px){
+	#Pub .notice{
+		position:absolute;
+		right:0px;
+		bottom:0px;
+	}
 }
 
 

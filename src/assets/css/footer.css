@@ -25,6 +25,12 @@
 	padding:var(--spacing);
 }
 
+#Footer .ligne-1 .col,
+#Footer .ligne-1 a[href]{
+	margin-left:auto;
+	margin-right:auto;
+}
+
 #Footer svg{
 	max-height:125px;
 	width:auto;
@@ -34,8 +40,14 @@
 	font-size: 24px;
 	text-align: center;
 	font-weight: 700;
-	flex:1;
+	/* flex:1; */
 	margin:0px;
+}
+
+@media screen and (min-width:768px){
+	#Footer .notice{
+		flex:1;
+	}
 }
 
 #Footer .ligne-2.signature{

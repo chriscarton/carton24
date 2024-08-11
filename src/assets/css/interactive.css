@@ -22,6 +22,11 @@
 	gap:var(--spacing);
 }
 
+.reaction img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 .reponses{
 	display:none;

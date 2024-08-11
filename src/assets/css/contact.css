@@ -16,12 +16,12 @@
 #Contact .conteneur{
 	position:relative;
 	z-index: 1;
-	min-height: 100vh;
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap:var(--spacing);
+	padding-block:var(--spacing);
 }
 
 #Contact .titre{
@@ -34,7 +34,7 @@
 }
 
 #Contact form{
-	min-width: 600px;
+	min-width:clamp(200px,75vw,600px);
 	margin-left: auto;
 	margin-right: auto;
 	display:flex;
