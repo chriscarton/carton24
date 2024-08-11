@@ -13,7 +13,7 @@
 :root{
 	--spacing:25px;
 	--golden:#AB9277;
-	--title1:clamp(36px,10vw,256px);
+	--title1:clamp(64px,10vw,256px);
 	--title2:clamp(36px,5vw,96px);
 	--title3:clamp(36px,3vw,64px);
 	--textSize:clamp(20px,3vw,36px);
@@ -51,8 +51,6 @@ section{
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
 
 
 .banniere{

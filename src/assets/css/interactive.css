@@ -1,10 +1,17 @@
 
 .message{
-	font-size: var(--title2);
 	font-weight: 700;
 	margin:0px;
 	text-wrap: balance;
+	font-size:clamp(24px,10vw,48px);
 }
+
+@media screen and (min-width:768px){
+	.message{
+		font-size: var(--title2);
+	}
+}
+
 .reaction{
 	display:none;
 }
