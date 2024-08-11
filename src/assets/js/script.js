@@ -25,11 +25,11 @@ function shiftEffect(element) {
 
 function taperChrisCarton(){
 
+	document.body.style.overflow = 'hidden';
+
 	let titrePrincipal = document.querySelector("#titrePrincipal");
 
 	if(titrePrincipal){
-		let hauteurOriginale = titrePrincipal.getBoundingClientRect().height;
-		titrePrincipal.style.height = '100vh';
 		let textContent = titrePrincipal.textContent.trim();
 
 		let typewriter = new Typewriter(titrePrincipal, {
@@ -39,12 +39,11 @@ function taperChrisCarton(){
 
 		typewriter.typeString(textContent)
 		.callFunction(() => {
+			titrePrincipal.parentElement.classList.add('to-min-height');
 			titrePrincipal.querySelector('.Typewriter__cursor').remove();
-			titrePrincipal.style.height = hauteurOriginale+'px';
-			titrePrincipal.addEventListener('transitionend',function(){
-				
+			titrePrincipal.parentElement.addEventListener('animationend',function(){
+				document.body.style.overflow = 'auto';
 				observerSections();
-
 			});
 		})
 		.start();
@@ -52,16 +51,7 @@ function taperChrisCarton(){
 		titrePrincipal.classList.add('visible');
 	}
 }
-/*
-function taperAutresMessages(){
-	let messages = document.querySelectorAll('.message');
-	if(messages){
-		messages.forEach(function(message){
-			console.log(message.textContent);
-		});
-	}
-}
-*/
+
 
 function animerLesElements(entry){
 	let elements = entry.target.querySelectorAll('[data-animation]');	
@@ -72,9 +62,9 @@ function animerLesElements(entry){
 			if (animationDelay) {
 				setTimeout(() => {
 					element.classList.add(animationClass);
-
-					if(element.classList.contains('disponibilites')){
-						let disponibilites = document.querySelector('.disponibilites b');
+					
+					if(element.id === 'mesDispos'){
+						let disponibilites = element.querySelector('b');
 						shiftEffect(disponibilites);
 					}
 

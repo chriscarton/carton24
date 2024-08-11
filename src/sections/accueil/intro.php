@@ -1,5 +1,7 @@
 <section id="Intro" class="part">
-	<h1 id="titrePrincipal">CHRIS <br class="mobile-only"> CARTON</h1>
+	<div id="zoneTitrePrincipal">
+		<h1 id="titrePrincipal">CHRIS CARTON</h1>
+	</div>
 	<div class="presentation">
 		<div class="col col-1" data-animation="fadeInDown">
 			<div class="conteneur-svg">
@@ -28,11 +30,11 @@
 		</div>
 	</div>
 	<div class="ligne ligne-bas">
-		<div class="col"></div>
+		<div class="col empty"></div>
 		<div class="col conteneur-svg" data-animation="fadeInDown" data-delay="3500">
 			<a href="#Pub"><?php require('./assets/svg/fleche-2.svg'); ?></a>
 		</div>
-		<div class="col disponibilites" data-animation="fadeIn" data-delay="4000">
+		<div id="mesDispos" class="col" data-animation="fadeIn" data-delay="4000">
 			<div>
 				Disponible en <br>
 				<b>SEP 24</b>

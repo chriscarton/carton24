@@ -2,15 +2,61 @@
 #Intro{
 	padding-inline:var(--spacing);
 	display:flex;
-	flex:1;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* flex:1; */
 	background:white;
+	gap:15px;
+	/* align-items: start; */
+	justify-content: start;
+}
+
+#zoneTitrePrincipal{
+	min-height: 100vh;
+	display: flex;
+	align-items: center; /* Center vertically */
+	justify-content: center; /* Center horizontally if needed */
+}
+
+.to-min-height{
+	animation:toMinHeight 1s linear forwards;
+}
+
+@keyframes toMinHeight{
+	from{
+		min-height:100vh;
+	}
+	to{
+		min-height:0vh;
+	}
+}
+
+#titrePrincipal{
+	font-weight: 900;
+	font-size: var(--title1);
+	margin:0px;
+	text-align: center;
+	line-height: 100%;
+	display:flex;
+	flex:1;
+	align-items: center;
+	justify-content: center;
+	transition:height 1s ease-in;
+	
 }
 
 .presentation{
 	display:flex;
 	flex-direction: row;
 	flex-wrap:wrap;
+	/* flex:1; */
 	gap:var(--spacing);
+}
+
+@media screen and (min-width:768px){
+	.presentation{
+		flex:1;
+	}
 }
 
 
@@ -35,39 +81,6 @@
 	mix-blend-mode: multiply;
 }
 
-.presentation .conteneur-menu{
-	align-items: center;
-	display:none;
-}
-
-@media screen and (min-width: 768px) {
-	.presentation .conteneur-menu{
-		display:block;
-	}
-}
-
-#menuPrincipal a,
-#menuPrincipal a:link,
-#menuPrincipal a:hover,
-#menuPrincipal a:focus,
-#menuPrincipal a:visited,
-#menuPrincipal a:active{
-	text-transform: uppercase;
-	color:silver;
-	font-size: var(--textSize);
-	font-weight: bold;
-	transition:all 0.25s ease-in;
-	text-decoration: none;
-	/* display:block; */
-	display:none;
-
-}
-
-#menuPrincipal a:hover{
-	cursor:pointer;
-	color:black;
-	text-decoration: underline;
-}
 
 .presentation__texte{
 	font-family: 'Goudy Bookletter 1911';
@@ -81,6 +94,7 @@
 	flex-direction: column;	
 	flex:1;
 	gap:var(--spacing);
+	flex:0;
 }
 
 @media screen and (min-width:768px){
@@ -113,7 +127,9 @@
 	flex:1;
 }
 
-.ligne-bas .disponibilites{
+
+
+#mesDispos{
 	font-size: var(--smallTextSize);
 	font-weight: 600;
 	display:flex;
@@ -121,8 +137,23 @@
 	justify-content: center;
 	line-height: 1;
 	margin-bottom:var(--spacing);
+	padding:var(--spacing);
+	min-height:50px; /* Pour éviter un layout shift */
+	position: relative;
+
 }
-.ligne-bas .disponibilites b{
+
+#MesDispos div{
+}
+
+@media screen and (min-width:768px){
+	#mesDispos{
+		min-height:200px; /* Pour éviter un layout shift */
+		margin-bottom:0px;
+	}
+}
+
+#mesDispos b{
 	font-size: var(--textSize);
 	font-weight: 900;
 }
