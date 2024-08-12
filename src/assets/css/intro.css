@@ -1,168 +1,114 @@
-
 #Intro{
-	/* padding-inline:var(--spacing); */
-	padding-inline:10px;
-	display:flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	background:white;
-	gap:10px;
-	justify-content: start;
-}
+	display:grid;
+	/* min-height: 100vh; */
 
-@media screen and (min-width:400px){
-	#Intro{
-		padding-inline:var(--spacing);
-		gap:15px;
-	}
-}
-
-#zoneTitrePrincipal{
-	min-height: 100vh;
-	display: flex;
-	align-items: center; /* Center vertically */
-	justify-content: center; /* Center horizontally if needed */
-}
-
-.to-min-height{
-	animation:toMinHeight 1s linear forwards;
-}
-
-@keyframes toMinHeight{
-	from{
-		min-height:100vh;
-	}
-	to{
-		min-height:0vh;
-	}
-}
-
-#titrePrincipal{
-	font-weight: 900;
-	font-size: var(--title1);
-	margin:0px;
-	text-align: center;
-	line-height: 100%;
-	display:flex;
-	flex:1;
-	align-items: center;
-	justify-content: center;
-	transition:height 1s ease-in;
-	
-}
-
-.presentation{
-	display:flex;
-	flex-direction: row;
-	flex-wrap:wrap;
-	/* flex:1; */
 	gap:var(--spacing);
+	padding:var(--spacing);
+	grid-template-areas: 
+		'presentation'
+		'portrait'
+		'menu'
+		'mesDispos'
+		'scrollDown'
+	;
 }
 
 @media screen and (min-width:768px){
-	.presentation{
-		flex:1;
+	#Intro{
+		grid-template-areas: 
+			'presentation portrait menu'
+			'.  scrollDown  mesDispos'
+		;
+		grid-template-columns: 1fr 1fr 1fr; /* Equal width columns */
+		grid-template-rows: 1fr auto;
 	}
 }
 
-
-.presentation .col{
-	flex:1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap:var(--spacing);
+#Presentation{
+	grid-area:presentation;
+	align-self: end;
 }
 
-
-.presentation img{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	aspect-ratio: 3/4;
-	max-width: 100%;
-	/* min-width: 300px; */
-
-	min-width: clamp(200px,85vw,300px);
-	/* width: 100%; */
-
-	height:auto;
-	mix-blend-mode: darken;
-	mix-blend-mode: multiply;
+#Presentation .conteneur-btn{
+	display:grid;
+	place-content: center;
 }
 
+#Presentation .btn-contact{
+	display:none;
+}
 
-.presentation__texte{
+@media screen and (min-width:768px){
+	#Presentation .btn-contact{
+		display:inline-flex;
+	}
+}
+
+.texte{
 	font-family: 'Goudy Bookletter 1911';
 	font-size: var(--textSize);
 	text-wrap:pretty;
+
 }
 
+.portrait{
+	grid-area:portrait;
+	max-width: 300px;
+	width:100%;
+	height:auto;
+	align-self: end;
+	justify-self: center;
+}
 
-#Intro .ligne.ligne-bas{
-	display:flex;
-	flex-direction: column;	
-	flex:1;
-	gap:var(--spacing);
-	flex:0;
+#menuPrincipal{
+	display:none;
 }
 
 @media screen and (min-width:768px){
-	#Intro .ligne.ligne-bas{
-		flex-direction: row;
+	#menuPrincipal{
+		display:grid;
+		place-content: center;
+		grid-area:menu;
 	}
 }
 
-#Intro .ligne.ligne-bas .conteneur-svg{
-	display:flex;
-	align-items: center;
-	justify-content: center;
+a{
+	text-transform: uppercase;
+	color:black;
+	font-size: var(--textSize);
+	font-weight: bold;
+	transition:all 0.25s ease-in;
+	text-decoration: none;
+	display:block;
+	line-height:1.6;
+	/* padding-block:var(--spacing); */
 }
 
-#Intro .ligne.ligne-bas svg{
-	animation:upAndDown 1s steps(5) infinite alternate-reverse;
+a#scrollDown{
+	grid-area:scrollDown;
+	display:grid;
+	place-content:center;
 }
 
-
-@keyframes upAndDown{
-	from{
-		transform:translateY(0%);
-	}
-	to{
-		transform:translateY(25%);
-	}
+a#scrollDown svg{
+	animation: upAndDown 1s steps(10) alternate-reverse infinite;
+}
+a#scrollDown svg path{
+	transition:all 0.25s ease-out;
 }
 
-.ligne-bas .col{
-	flex:1;
+a#scrollDown svg:hover path{
+	fill:var(--golden);
 }
-
-
 
 #mesDispos{
+	grid-area:mesDispos;
+	display:grid;
+	place-content:center;
 	font-size: var(--smallTextSize);
 	font-weight: 600;
-	display:flex;
-	align-items: center;
-	justify-content: center;
 	line-height: 1;
-	margin-bottom:var(--spacing);
-	padding:var(--spacing);
-	min-height:50px; /* Pour éviter un layout shift */
-	position: relative;
-
 }
-
-#MesDispos div{
-}
-
-@media screen and (min-width:768px){
-	#mesDispos{
-		min-height:200px; /* Pour éviter un layout shift */
-		margin-bottom:0px;
-	}
-}
-
 #mesDispos b{
 	font-size: var(--textSize);
 	font-weight: 900;

@@ -1,7 +1,10 @@
+<section id="zoneTitrePrincipal">
+	<h1 id="titrePrincipal">CHRIS CARTON</h1>
+</section>
 <?php 
 
-require('./sections/accueil/intro.php'); 
 require('./elements/decoupe.php'); 
+require('./sections/accueil/intro.php'); 
 require('./sections/accueil/pub.php'); 
 
 $texte_banniere = 'NE BOUGEZ PAS';
@@ -17,5 +20,4 @@ require('./sections/accueil/contact.php');
 require('./sections/accueil/carte.php'); 
 
 require('./elements/footer.php'); 
-
 ?>

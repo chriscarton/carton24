@@ -26,6 +26,7 @@ function shiftEffect(element) {
 function taperChrisCarton(){
 
 	document.body.style.overflow = 'hidden';
+
 	let titrePrincipal = document.querySelector("#titrePrincipal");
 
 	if(titrePrincipal){
@@ -61,11 +62,13 @@ function animerLesElements(entry){
 			if (animationDelay) {
 				setTimeout(() => {
 					element.classList.add(animationClass);
-					//Si on est sur mesDispos on active le shift effect
+					
 					if(element.id === 'mesDispos'){
 						let disponibilites = element.querySelector('b');
 						shiftEffect(disponibilites);
 					}
+
+
 				}, parseInt(animationDelay, 10));
 			} else {
 				element.classList.add(animationClass);
@@ -101,6 +104,7 @@ function afficherLesReponses(message){
 							let reactionElement = document.querySelector('[data-reaction="' + dataReponse + '"]');
 							if (reactionElement) {
 								reactionElement.classList.add('visible');
+								// reactionElement.click();
 							}
 						});
 					});
@@ -136,8 +140,16 @@ function taperLesMessages(entry){
 
 function observerSections(){
 
+	/*
+		On pourrait faire...
+	*/
+
 	let parts  = document.querySelectorAll('.part');
 
+	// comme ça on ne serait plus sur strictement des sections...
+
+	// let sections = document.querySelectorAll('section');
+	// add interaction observer to sections
 	if(parts){
 		parts.forEach(part => {
 
@@ -148,7 +160,6 @@ function observerSections(){
 			const observer = new IntersectionObserver(entries => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-
 						animerLesElements(entry);
 						taperLesMessages(entry);
 						observer.unobserve(entry.target); // Unobserve the element after the first intersection
@@ -164,6 +175,6 @@ function observerSections(){
 
 }
 
-//taperChrisCarton();
+taperChrisCarton();
 
 

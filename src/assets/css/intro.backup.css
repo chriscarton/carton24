@@ -1,0 +1,128 @@
+
+#Intro{
+	padding-inline:10px;
+	background:white;
+	gap:10px;
+	justify-content: start;
+}
+
+@media screen and (min-width:400px){
+	#Intro{
+		padding-inline:var(--spacing);
+		gap:15px;
+	}
+}
+
+
+
+
+.presentation{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	gap:var(--spacing);
+}
+
+@media screen and (min-width:768px){
+	.presentation{
+		flex:1;
+	}
+}
+
+
+.presentation .col{
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:var(--spacing);
+}
+
+
+.presentation img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	aspect-ratio: 3/4;
+	max-width: 100%;
+	min-width: clamp(200px,85vw,300px);
+	height:auto;
+	mix-blend-mode: darken;
+	mix-blend-mode: multiply;
+}
+
+
+.presentation__texte{
+	font-family: 'Goudy Bookletter 1911';
+	font-size: var(--textSize);
+	text-wrap:pretty;
+}
+
+
+#Intro .ligne.ligne-bas{
+	display:flex;
+	flex-direction: column;	
+	flex:1;
+	gap:var(--spacing);
+	flex:0;
+}
+
+@media screen and (min-width:768px){
+	#Intro .ligne.ligne-bas{
+		flex-direction: row;
+	}
+}
+
+#Intro .ligne.ligne-bas .conteneur-svg{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#Intro .ligne.ligne-bas svg{
+	animation:upAndDown 1s steps(5) infinite alternate-reverse;
+}
+
+
+@keyframes upAndDown{
+	from{
+		transform:translateY(0%);
+	}
+	to{
+		transform:translateY(25%);
+	}
+}
+
+.ligne-bas .col{
+	flex:1;
+}
+
+
+
+#mesDispos{
+	font-size: var(--smallTextSize);
+	font-weight: 600;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	margin-bottom:var(--spacing);
+	padding:var(--spacing);
+	min-height:50px; /* Pour éviter un layout shift */
+	position: relative;
+}
+
+#MesDispos div{
+}
+
+@media screen and (min-width:768px){
+	#mesDispos{
+		min-height:200px; /* Pour éviter un layout shift */
+		margin-bottom:0px;
+	}
+}
+
+#mesDispos b{
+	font-size: var(--textSize);
+	font-weight: 900;
+}

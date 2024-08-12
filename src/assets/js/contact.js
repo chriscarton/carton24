@@ -1,5 +1,4 @@
 let formContact = document.querySelector('#formContact');
-console.log(formContact);
 if(formContact){
 	formContact.addEventListener('submit',function(e){
 		e.preventDefault();

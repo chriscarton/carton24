@@ -1,26 +1,21 @@
+/*
 .conteneur-decoupe{
 	position:relative;
 	z-index: 9999;
 	overflow-x: hidden;
-	height:64px;
+	overflow-y: visible;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 }
+*/
 .decoupe{
 	width: 100%;
 	display: flex;
 	align-items: center;
-	position:absolute;
+	border-top: 5px dashed black;
 }
 
-.decoupe hr {
-	border: 0;
-	border-top: 5px dashed black;
-	height: 0;
-	width: 100%;
-	margin:0px;
-}
 .decoupe svg{
 	overflow:visible;
 	width:64px;
@@ -34,8 +29,6 @@
 	transform-origin:center;
 	animation:ciseauAnim 0.5s steps(5) alternate infinite;
 }
-
-
 
 @keyframes ciseauAnim{
 	from{

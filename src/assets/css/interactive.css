@@ -46,7 +46,7 @@
 }
 
 .reponses .reponse:hover{
-	color:goldenrod;
+	color:var(--golden);
 	cursor:pointer;
 }
 
@@ -56,5 +56,5 @@
 }
 
 .reponses .reponse.reponse-choisie{
-	color:goldenrod;
+	color:var(--golden);
 }

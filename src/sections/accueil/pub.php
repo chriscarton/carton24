@@ -1,4 +1,4 @@
-<div id="Pub" class="part">
+<div id="Pub" class="part flex-center">
 	<div class="ordinateur" data-animation="fadeIn">
 		<div class="svg-container">
 			<?php require('./assets/svg/asterisque.svg'); ?>

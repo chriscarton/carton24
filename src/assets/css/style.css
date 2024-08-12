@@ -1,6 +1,5 @@
 @import './animations.css';
 @import './intro.css';
-@import './menu.css';
 @import './btn.css';
 @import './decoupe.css';
 @import './pub.css';
@@ -28,11 +27,29 @@
 	}
 }
 
+*[data-animation]{
+	/* opacity:0; */
+}
+
+
+.flex-center{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; 
+}
+
+.part{
+	/* display:none; */
+}
+
 body{
 	background:white;
 	padding:0px;
 	margin:0px;
 	font-family: 'Jost';
+	min-height:100vh;
+	display:grid;
 }
 *{
 	line-height: 1;
@@ -41,6 +58,7 @@ body{
 html{
 	scroll-behavior:smooth;
 }
+/*
 section{
 	min-height: 50vh;
 	display:flex;
@@ -50,17 +68,18 @@ section{
 	gap:var(--spacing);
 }
 
+
 @media screen and (min-width:768px){
 	section{
 		min-height:100vh;
 	}
 }
+*/
 
 .conteneur{
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 .banniere{
 	min-height:auto;
@@ -75,6 +94,43 @@ section{
 }
 
 
+#zoneTitrePrincipal{
+	background:yellow;
+	/* min-height: 100vh; */
+	min-height:auto;
+	display: flex;
+	align-items: center; /* Center vertically */
+	justify-content: center; /* Center horizontally if needed */
+	/* animation:toMinHeight 1s ease-in-out forwards 1s; */
+	padding-block:var(--spacing);
+}
 
+
+#titrePrincipal{
+	font-weight: 900;
+	font-size: var(--title1);
+	margin:0px;
+	text-align: center;
+	line-height: 100%;
+	display:flex;
+	flex:1;
+	align-items: center;
+	justify-content: center;
+	transition:height 1s ease-in;
+	
+}
+
+.to-min-height{
+	animation:toMinHeight 1s ease-in-out forwards 1s;
+}
+
+@keyframes toMinHeight{
+	from{
+		min-height:100vh;
+	}
+	to{
+		min-height:0vh;
+	}
+}
 
 
