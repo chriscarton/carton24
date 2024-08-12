@@ -1,24 +1,38 @@
 #Pub{
-	padding-block:calc(var(--spacing)*2);
+	/* padding-block:calc(var(--spacing)*2); */
+	
 	background-color:white;
 	position:relative;
 	gap:var(--spacing);
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	justify-content: space-between;
 
 }
 
 @media screen and (min-width:768px){
 	#Pub{
 		min-height:100vh;
+		justify-content: center;
 	}
 }
 
 .ordinateur{
+	margin-top:calc(var(--spacing)*2);
 	max-width: 80%; 
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center; 
 	position:relative;
+}
+
+@media screen and (min-width:1200px){
+	.ordinateur{
+		max-width: 1200px; 
+	}
 }
 
 .svg-container{

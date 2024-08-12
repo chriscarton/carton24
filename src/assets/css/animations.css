@@ -1,5 +1,7 @@
-.fadeIn{
+*[data-animation=fadeIn]{
 	opacity:0;
+}
+.fadeIn{
 	animation:fadeIn 1s ease-in forwards;
 }
 

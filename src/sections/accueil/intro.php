@@ -1,9 +1,16 @@
 <section id="Intro">
 
-	<div id="Presentation">
+	<div id="Presentation" data-animation="fadeIn">
 		<?php require('./assets/svg/fleche-1.svg'); ?>
-		<p class="texte">
-			Designer graphique et développeur web freelance, je crée des sites internet de qualité qui font le bonheur de mes clients.
+		<p class="texte typed">
+Designer 
+graphique et 
+développeur web 
+freelance, je crée 
+des sites internet 
+de qualité qui 
+font le bonheur 
+de mes clients.
 		</p>
 		<div class="conteneur-btn">
 			<a class="btn btn-contact" href="#Contact" data-animation="fadeIn" data-delay="10s">

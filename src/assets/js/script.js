@@ -25,7 +25,7 @@ function shiftEffect(element) {
 
 function taperChrisCarton(){
 
-	document.body.style.overflow = 'hidden';
+	//document.body.style.overflow = 'hidden';
 	let titrePrincipal = document.querySelector("#titrePrincipal");
 
 	if(titrePrincipal){
@@ -41,8 +41,8 @@ function taperChrisCarton(){
 			titrePrincipal.parentElement.classList.add('to-min-height');
 			titrePrincipal.querySelector('.Typewriter__cursor').remove();
 			titrePrincipal.parentElement.addEventListener('animationend',function(){
-				document.body.style.overflow = 'auto';
-				observerSections();
+				//document.body.style.overflow = 'auto';
+				//observerSections();
 			});
 		})
 		.start();
@@ -133,7 +133,7 @@ function taperLesMessages(entry){
 	}	
 
 }
-
+/*
 function observerSections(){
 
 	let parts  = document.querySelectorAll('.part');
@@ -163,7 +163,77 @@ function observerSections(){
 	}
 
 }
+	*/
 
-//taperChrisCarton();
+function observerDataAnimations() {
+	// Select elements to observe
+	// const elementsToObserve = document.querySelectorAll('.animate-on-scroll');
+	const elementsToObserve = document.querySelectorAll('[data-animation]');
 
+	// Create the IntersectionObserver
+	const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+					if (entry.isIntersecting) {
+							// Add animation class or trigger animation
+							const animationClass = entry.target.getAttribute('data-animation');
+							// Add the animation class to the element
+							entry.target.classList.add(animationClass);                // Optionally, unobserve the element if you only want the animation to happen once
+							observer.unobserve(entry.target);
+					}
+			});
+	}, {
+			threshold: 0.5 // Adjust the threshold as needed
+	});
+
+	// Observe each selected element
+	elementsToObserve.forEach(element => {
+			observer.observe(element);
+	});
+}
+
+function observerTyped() {
+	// Select elements with the .typed class
+	const elementsToObserve = document.querySelectorAll('.typed');
+
+	// Create the IntersectionObserver
+	const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+					if (entry.isIntersecting) {
+							// Handle the intersection (you can fill in this part)
+							// console.log(`Element ${entry.target} is intersecting`);
+							// Optionally, unobserve the element if you only want the action to happen once
+
+							let textContent = entry.target.textContent.trim();
+
+							entry.target.textContent = '';
+
+							let typewriter = new Typewriter(entry.target, {
+									delay: 35,
+									cursor: "|"
+							});
+						
+							typewriter.typeString(textContent)
+							.callFunction(() => {
+								entry.target.querySelector('.Typewriter__cursor').remove();
+								//afficherLesReponses(entry.target);
+							})
+							.start();
+
+							observer.unobserve(entry.target);
+					}
+			});
+	}, {
+			threshold: 0.5 // Adjust the threshold as needed
+	});
+
+	// Observe each selected element
+	elementsToObserve.forEach(element => {
+			observer.observe(element);
+	});
+}
+
+
+taperChrisCarton();
+observerDataAnimations();
+observerTyped();
 

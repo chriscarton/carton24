@@ -1,7 +1,6 @@
 #Intro{
+	flex:1;
 	display:grid;
-	/* min-height: 100vh; */
-
 	gap:var(--spacing);
 	padding:var(--spacing);
 	grid-template-areas: 
@@ -29,6 +28,12 @@
 	align-self: end;
 }
 
+@media screen and (min-width:1200px){
+	#Presentation{
+		align-self: start;
+	}
+}
+
 #Presentation .conteneur-btn{
 	display:grid;
 	place-content: center;
@@ -47,8 +52,8 @@
 .texte{
 	font-family: 'Goudy Bookletter 1911';
 	font-size: var(--textSize);
-	text-wrap:pretty;
-
+	/* text-wrap:pretty; */
+	
 }
 
 .portrait{

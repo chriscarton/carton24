@@ -1,10 +1,15 @@
-<section id="zoneTitrePrincipal">
-	<h1 id="titrePrincipal">CHRIS CARTON</h1>
-</section>
-<?php 
+<div id="Accueil">
+	<section id="zoneTitrePrincipal">
+		<h1 id="titrePrincipal">CHRIS CARTON</h1>
+	</section>
+	<?php 
+	require('./elements/decoupe.php'); 
+	require('./sections/accueil/intro.php'); 
+	?>
+</div>
 
-require('./elements/decoupe.php'); 
-require('./sections/accueil/intro.php'); 
+<?php
+require('./sections/accueil/realisations.php'); 
 require('./sections/accueil/pub.php'); 
 
 $texte_banniere = 'NE BOUGEZ PAS';
