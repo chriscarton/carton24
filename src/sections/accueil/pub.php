@@ -1,4 +1,4 @@
-<div id="Pub">
+<div id="Pub" class="part">
 	<div class="ordinateur" data-animation="fadeIn">
 		<div class="svg-container">
 			<?php require('./assets/svg/asterisque.svg'); ?>

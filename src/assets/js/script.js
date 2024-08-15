@@ -187,7 +187,6 @@ function taperLesMessages(entry){
 	}	
 
 }
-/*
 function observerSections(){
 
 	let parts  = document.querySelectorAll('.part');
@@ -217,7 +216,6 @@ function observerSections(){
 	}
 
 }
-	*/
 
 function observerDataAnimations() {
 	// Select elements to observe
@@ -305,7 +303,7 @@ function observerTyped() {
 
 
 titrePrincipal();
-
+observerSections();
 
 //observerDataAnimations();
 //observerTyped();

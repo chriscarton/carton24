@@ -5,7 +5,7 @@
 			<textarea name="projet" required placeholder="Alors voilà..."></textarea>
 			<input type="email" name="email" required placeholder="adresse@email.com">
 			<div class="conteneur-btn">
-				<button type="submit" class="btn" data-animation="fadeIn">
+				<button type="submit" class="btn">
 					<?php require('./assets/svg/send.svg'); ?>
 					Envoyer
 				</button>
