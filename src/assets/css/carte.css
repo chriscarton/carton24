@@ -3,10 +3,14 @@
 	background-repeat:repeat;
 	position:relative;
 	background-size:100px;
+	min-height: 50vh;
+	display:grid;
+	place-items: center;
 }
 
 @media screen and (min-width:768px){
 	#Carte{
+		min-height: 100vh;
 		background-size:200px;
 	}
 }

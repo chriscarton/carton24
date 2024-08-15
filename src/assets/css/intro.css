@@ -25,7 +25,7 @@
 
 #Presentation{
 	grid-area:presentation;
-	align-self: end;
+	/* align-self: end; */
 }
 
 @media screen and (min-width:1200px){
@@ -33,6 +33,18 @@
 		align-self: start;
 	}
 }
+
+#Presentation #Fleche1{
+	/* display:none; */
+	transform:scale(0);
+	transform-origin: left top;
+	transition:all 0.5s linear;
+}
+
+#Presentation #Fleche1.visible{
+	transform:scale(1);
+}
+
 
 #Presentation .conteneur-btn{
 	display:grid;
@@ -43,34 +55,53 @@
 	display:none;
 }
 
-@media screen and (min-width:768px){
-	#Presentation .btn-contact{
-		display:inline-flex;
+/* @media screen and (min-width:768px){ */
+	#Presentation .btn-contact.visible{
+		display:flex;
+		opacity:0;
+		transform:scale(0) rotate(-10deg);
+		animation:popInFadeRotate 1s ease-in-out forwards;
 	}
-}
+
+/* } */
 
 .texte{
 	font-family: 'Goudy Bookletter 1911';
 	font-size: var(--textSize);
-	/* text-wrap:pretty; */
-	
+	display:none;
 }
 
-.portrait{
+.texte.visible{
+	display:block;
+}
+
+img.portrait{
 	grid-area:portrait;
 	max-width: 300px;
 	width:100%;
 	height:auto;
 	align-self: end;
 	justify-self: center;
+
+	filter:grayscale(1) ;
+	/* filter:grayscale(1) brightness(1.5); */
+}
+
+@media screen and (min-width:1200px){
+	img.portrait{
+		align-self:start;
+	}
 }
 
 #menuPrincipal{
 	display:none;
+	transition:all 1s linear;
+	opacity:0;
 }
 
 @media screen and (min-width:768px){
-	#menuPrincipal{
+	#menuPrincipal.visible{
+		opacity:1;
 		display:grid;
 		place-content: center;
 		grid-area:menu;

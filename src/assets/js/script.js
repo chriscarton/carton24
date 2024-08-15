@@ -23,7 +23,7 @@ function shiftEffect(element) {
 	}
 }
 
-function taperChrisCarton(){
+function titrePrincipal(){
 
 	//document.body.style.overflow = 'hidden';
 	let titrePrincipal = document.querySelector("#titrePrincipal");
@@ -41,15 +41,93 @@ function taperChrisCarton(){
 			titrePrincipal.parentElement.classList.add('to-min-height');
 			titrePrincipal.querySelector('.Typewriter__cursor').remove();
 			titrePrincipal.parentElement.addEventListener('animationend',function(){
-				//document.body.style.overflow = 'auto';
-				//observerSections();
+				/*
+				let decoupe = document.querySelector('.decoupe-1');
+				if(decoupe){
+					let ciseaux = decoupe.querySelector('svg');
+					ciseaux.style.animationPlayState = 'running';
+					decoupe.classList.add('visible');
+				}
+				*/
+
+				intro();
 			});
 		})
 		.start();
 
-		titrePrincipal.classList.add('visible');
 	}
 }
+
+/*
+function intro(){
+	let intro = document.querySelector('#Intro');
+	if(intro){
+		let fleche1 = intro.querySelector('#Presentation #Fleche1');
+		let texte = intro.querySelector('#Presentation .texte');
+		let btnContact = intro.querySelector('#Presentation .btn-contact');
+		let portrait = intro.querySelector('#Intro .portrait');
+		let menuPrincipal = intro.querySelector('#menuPrincipal');
+
+		fleche1.classList.add('visible');
+
+		fleche1.addEventListener('transitionend',function(){
+						
+			texte.classList.add('visible');
+
+			let textContent = texte.textContent.trim();
+
+			let typewriter = new Typewriter(texte, {
+					delay: 20,
+					cursor: "|"
+			});
+
+			typewriter.typeString(textContent)
+			.callFunction(() => {
+				btnContact.classList.add('visible');
+				btnContact.addEventListener('animationend',function(){
+					if(portrait){
+						portrait.classList.add('fadeIn');
+						portrait.addEventListener('animationend',function(){
+							if(menuPrincipal){
+								menuPrincipal.classList.add('visible');
+								// console.log(menuPrincipal);
+								menuPrincipal.addEventListener('transitionend',function(){
+									alert('menu transition end');
+								})
+							}
+						});
+					}
+				});
+
+			})
+			.start();
+
+		})
+
+
+	}
+}
+	*/
+
+function intro(){
+
+	let intro = document.querySelector('#Intro');
+
+
+	let fleche1 = intro.querySelector('#Presentation #Fleche1');
+	let texte = intro.querySelector('#Presentation .texte');
+	let btnContact = intro.querySelector('#Presentation .btn-contact');
+	let portrait = intro.querySelector('#Intro .portrait');
+	let menuPrincipal = intro.querySelector('#menuPrincipal');
+
+	fleche1.classList.add('visible');
+	texte.classList.add('visible');
+	btnContact.classList.add('visible');
+	portrait.classList.add('fadeIn');
+	menuPrincipal.classList.add('visible');
+
+}
+
 
 
 function animerLesElements(entry){
@@ -176,8 +254,16 @@ function observerDataAnimations() {
 					if (entry.isIntersecting) {
 							// Add animation class or trigger animation
 							const animationClass = entry.target.getAttribute('data-animation');
+							const animationDelay = entry.target.getAttribute('data-delay');
+
+							if(animationDelay){
+								setTimeout(function(){
+									entry.target.classList.add(animationClass);
+								},parseInt(animationDelay))
+							}else{
+								entry.target.classList.add(animationClass);
+							}
 							// Add the animation class to the element
-							entry.target.classList.add(animationClass);                // Optionally, unobserve the element if you only want the animation to happen once
 							observer.unobserve(entry.target);
 					}
 			});
@@ -195,6 +281,8 @@ function observerTyped() {
 	// Select elements with the .typed class
 	const elementsToObserve = document.querySelectorAll('.typed');
 
+
+
 	// Create the IntersectionObserver
 	const observer = new IntersectionObserver((entries, observer) => {
 			entries.forEach(entry => {
@@ -207,15 +295,22 @@ function observerTyped() {
 
 							entry.target.textContent = '';
 
+
+							let typedSpeed = 70;
+
+							if(entry.target.getAttribute('data-typed-speed')){
+								typedSpeed = parseInt(entry.target.getAttribute('data-typed-speed'));
+							}
+
 							let typewriter = new Typewriter(entry.target, {
-									delay: 35,
+									delay: typedSpeed,
 									cursor: "|"
 							});
 						
 							typewriter.typeString(textContent)
 							.callFunction(() => {
 								entry.target.querySelector('.Typewriter__cursor').remove();
-								//afficherLesReponses(entry.target);
+								afficherLesReponses(entry.target);
 							})
 							.start();
 
@@ -233,7 +328,9 @@ function observerTyped() {
 }
 
 
-taperChrisCarton();
-observerDataAnimations();
-observerTyped();
+titrePrincipal();
+
+
+//observerDataAnimations();
+//observerTyped();
 

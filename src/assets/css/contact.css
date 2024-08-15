@@ -4,7 +4,15 @@
 	background-repeat: repeat;
 	position:relative;
 	overflow:hidden;
-	/* min-height: auto; */
+	display:grid;
+	place-items: center;
+	min-height: 50vh;
+}
+
+@media screen and (min-width:768px){
+	#Contact{
+		min-height:100vh;
+	}
 }
 
 #Contact > svg{

@@ -10,10 +10,14 @@
 }
 */
 .decoupe{
+	display:none;
 	width: 100%;
+	border-top: 5px dashed black;
+}
+
+.decoupe.visible{
 	display: flex;
 	align-items: center;
-	border-top: 5px dashed black;
 }
 
 .decoupe svg{
@@ -23,6 +27,8 @@
 	position:absolute;
 	animation: moveRight 5s linear infinite;
 	transform:translateX(-100%);
+	animation-play-state: paused;
+
 }
 
 #ciseau-1{

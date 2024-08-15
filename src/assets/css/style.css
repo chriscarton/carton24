@@ -62,8 +62,12 @@ html{
 
 }
 
-.typed{
-	white-space: pre;
+.pre-typed{
+	/* width: 100%; */
+
+	/* white-space-collapse: break-spaces; */
+	/* white-space: pre; */
+
 }
 /*
 .typed::before {

@@ -2,7 +2,7 @@
 	<div>
 		<img src="/assets/img/cafetiere.png" alt="cafetiere" data-animation="fadeInRight">
 	</div>
-	<p class="message">Voulez-vous un café ?</p>
+	<p class="message typed">Voulez-vous un café ?</p>
 	<div class="reponses">
 		<button class="reponse" data-reponse="oui-a-un-cafe">oui</button>
 		<button class="reponse">non</button>
