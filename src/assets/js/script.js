@@ -58,73 +58,49 @@ function titrePrincipal(){
 	}
 }
 
-/*
+
 function intro(){
+
 	let intro = document.querySelector('#Intro');
-	if(intro){
-		let fleche1 = intro.querySelector('#Presentation #Fleche1');
-		let texte = intro.querySelector('#Presentation .texte');
-		let btnContact = intro.querySelector('#Presentation .btn-contact');
-		let portrait = intro.querySelector('#Intro .portrait');
-		let menuPrincipal = intro.querySelector('#menuPrincipal');
 
-		fleche1.classList.add('visible');
-
-		fleche1.addEventListener('transitionend',function(){
-						
-			texte.classList.add('visible');
-
-			let textContent = texte.textContent.trim();
-
-			let typewriter = new Typewriter(texte, {
-					delay: 20,
-					cursor: "|"
-			});
-
-			typewriter.typeString(textContent)
-			.callFunction(() => {
-				btnContact.classList.add('visible');
-				btnContact.addEventListener('animationend',function(){
-					if(portrait){
-						portrait.classList.add('fadeIn');
-						portrait.addEventListener('animationend',function(){
-							if(menuPrincipal){
-								menuPrincipal.classList.add('visible');
-								// console.log(menuPrincipal);
-								menuPrincipal.addEventListener('transitionend',function(){
-									alert('menu transition end');
-								})
-							}
-						});
-					}
-				});
-
-			})
-			.start();
-
-		})
-
-
+	if(!intro){
+		return;
 	}
-}
-	*/
-
-function intro(){
-
-	let intro = document.querySelector('#Intro');
-
 
 	let fleche1 = intro.querySelector('#Presentation #Fleche1');
 	let texte = intro.querySelector('#Presentation .texte');
 	let btnContact = intro.querySelector('#Presentation .btn-contact');
 	let portrait = intro.querySelector('#Intro .portrait');
 	let menuPrincipal = intro.querySelector('#menuPrincipal');
+	let scrollDownSvg = intro.querySelector('#scrollDown svg');
 
-	fleche1.classList.add('visible');
-	texte.classList.add('visible');
-	btnContact.classList.add('visible');
-	portrait.classList.add('fadeIn');
-	menuPrincipal.classList.add('visible');
+	let elementsArray = [fleche1, texte, btnContact, portrait, menuPrincipal, scrollDownSvg];
+
+	// Function to add 'visible' class and set up the next transition
+	function handleTransition(index) {
+		if (index >= elementsArray.length) return; // Exit if index is out of bounds
+
+		// Check if the element is in display: none
+		if (window.getComputedStyle(elementsArray[index]).display === 'none') {
+			handleTransition(index + 1); // Skip to the next element
+			return;
+		}
+
+		elementsArray[index].classList.add('visible');
+
+		elementsArray[index].addEventListener('transitionend', function onTransitionEnd() {
+			elementsArray[index].removeEventListener('transitionend', onTransitionEnd); // Remove the event listener to avoid multiple triggers
+			
+			if (index === elementsArray.length - 1) {
+					// alert('The very last element has finished its transition.');
+			} else {
+					handleTransition(index + 1); // Start the transition for the next element
+			}
+		});
+	}
+	
+	// Start the transition chain with the first element
+	handleTransition(0);
 
 }
 

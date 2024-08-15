@@ -37,8 +37,7 @@
 
 	
 	?>
-	<img src="/assets/img/photos/NB/<?= $photo ?>.jpg" data-animation="fadeIn" data-delay="1000" class="portrait" alt="Portrait Chris Carton / Webdesigner">
-
+	<img src="/assets/img/photos/NB/<?= $photo ?>.jpg" class="portrait" alt="Portrait Chris Carton / Webdesigner">
 
 	<nav id="menuPrincipal">
 		<a href="#">Articles</a>
@@ -48,15 +47,8 @@
 	</nav>
 
 
-	<a href="#Pub" id="scrollDown">
+	<a href="#Realisations" id="scrollDown">
 		<?php require('./assets/svg/fleche-2.svg'); ?>
 	</a>
-
-	<div id="mesDispos" class="col" data-animation="fadeIn" data-delay="4000">
-		<div>
-			Disponible en <br>
-			<b>SEP 24</b>
-		</div>
-	</div>
 
 </section>
