@@ -11,6 +11,14 @@
 @import './footer.css';
 @import './fonts.css';
 
+#footerZone{
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	border:5px dashed orange;
+}
+
 :root{
 	--spacing:15px;
 	--golden:#AB9277;
