@@ -26,11 +26,7 @@
 	/* align-self: end; */
 }
 
-@media screen and (min-width:1200px){
-	#Presentation{
-		align-self: start;
-	}
-}
+
 
 #Presentation #Fleche1{
 	transform:scale(0);
@@ -92,11 +88,6 @@ img.portrait.visible{
 	opacity:1;
 }
 
-@media screen and (min-width:1200px){
-	img.portrait{
-		align-self:start;
-	}
-}
 
 #menuPrincipal{
 	display:none;
