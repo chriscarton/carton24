@@ -3,84 +3,97 @@
 	background:url('/assets/img/texture-carton-1.jpg');
 	min-height: 25vh;
 	display:flex;
-	
-	.col-titre{
-		padding:var(--spacing);
-		background:black;
-		color:white;
-		display:grid;
-		place-content: center;
-		flex:2;
-		/* font-size:clamp(36px,5vw,96px); */
+	flex-direction: column;
+}
+
+@media screen and (min-width:768px){
+	#Offre{
+		flex-direction: row;
 	}
+}
 
-	.col-titre .titre{
-		/* line-height: 1.6; */
-		font-size: var(--title2);
+#Offre .col-titre{
+	padding:var(--spacing);
+	background:black;
+	color:white;
+	display:grid;
+	place-content: center;
+	flex:2;
+}
 
-		text-wrap:balance;
-	}
+#Offre .col-titre .titre{
+	font-size: var(--title2);
+	text-wrap:balance;
+}
 
-	.clip-triangle{
-		flex:2;
+#Offre .clip-triangle{
+	background:black;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	height:50px;
+}
+
+@media screen and (min-width:768px){
+	#Offre .clip-triangle{
 		width: 200px;
-		background:black;
+		height:auto;
 		clip-path: polygon(0 0, 0% 100%, 100% 50%);
 	}
-
-	.blabla{
-		font-size: var(--textSize);
-	}
-
-	.col-contenu{
-		flex:8;
-		ul{
-
-			margin:var(--spacing);
-			padding:0px;
-			font-size: 20px;
-		}
-		ul li{
-			line-height: 1.6;
-		}
-	}
-
-	.col-contenu .titre{
-		font-size: var(--title2);
-		color:white;
-		/* max-width: 450px; */
-	}
-
-
-	.col-titre .titre{
-		text-align: center;
-	}
-
-	.col-contenu{
-		padding:var(--spacing);
-		display:grid;
-		place-content: center;
-	}
-
-	.btn-container{
-		padding-bottom:var(--spacing);
-	}
-	.btn-container .btn{
-		text-transform: none;
-	}
-
 }
 
-#Autres{
-	font-family: 'Goudy Bookletter 1911';
-	font-size:24px;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	min-height:300px;
+#Offre .blabla{
+	font-size: var(--textSize);
+}
+
+#Offre .col-contenu{
+	text-align: center;
+	flex:8;
+}
+
+
+
+#Offre .col-contenu ul{
+	text-align: center;
+	margin:var(--spacing);
+	padding:0px;
+	font-size: 20px;
+	list-style-position: inside; /* Ensure dots are inside the list items */
+}
+
+@media screen and (min-width:768px){
+	#Offre .col-contenu{
+		text-align: left;
+	}
+	#Offre .col-contenu ul{
+		text-align: left;
+	}
+}
+
+
+#Offre .col-contenu li{
+	line-height: 1.6;
+	width: auto;
+}
+
+#Offre .col-contenu .titre{
+	font-size: var(--title2);
+	color:white;
+}
+
+
+#Offre .col-titre .titre{
+	text-align: center;
+}
+
+#Offre .col-contenu{
 	padding:var(--spacing);
+	display:grid;
+	place-content: center;
 }
 
-#Autres p{
-	width: 75%;
+#Offre .btn-container{
+	padding-bottom:var(--spacing);
 }
+#Offre .btn-container .btn{
+	text-transform: none;
+}
+

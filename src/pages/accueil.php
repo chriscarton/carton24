@@ -9,19 +9,24 @@
 </div>
 
 <?php
-require('./sections/accueil/realisations.php'); 
-require('./sections/accueil/pub.php'); 
 
+require('./sections/accueil/realisations.php'); 
+
+require('./sections/accueil/pub.php'); 
+/*
 $texte_banniere = 'NE BOUGEZ PAS';
 require('./elements/banniere.php'); 
 
-require('./sections/accueil/cafe.php'); 
+*/
 require('./sections/accueil/offre.php'); 
+require('./sections/accueil/autre.php'); 
 
+// require('./sections/accueil/cafe.php'); 
 
+/*
 $texte_banniere = 'installez-vous confortablement';
 require('./elements/banniere.php'); 
-
+*/
 require('./sections/accueil/contact.php');
 ?>
 

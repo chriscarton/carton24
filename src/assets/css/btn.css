@@ -14,7 +14,7 @@ input[type=submit]
 	gap:5px;
 	text-transform: uppercase;
 	border:3px solid transparent;
-	transition:background 0.5s ease-out;
+	transition:all 0.5s ease-out;
 }
 .btn.caminteresse.active,
 .btn:hover{
@@ -24,10 +24,21 @@ input[type=submit]
 	cursor:pointer;
 }
 
-.btn svg path{
-	fill:white;
+.caminteresse svg{
+	display:none;
 }
 
-.btn:hover svg path{
+.caminteresse.active svg{
+	display:block;
+}
+
+
+.btn svg path{
+	fill:white;
+	transition:all 0.5s ease-out;
+}
+
+.btn:hover svg path, 
+.btn.active svg path{
 	fill:var(--golden);
 }

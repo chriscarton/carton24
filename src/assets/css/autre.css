@@ -1,0 +1,13 @@
+#Autre{
+	font-family: 'Goudy Bookletter 1911';
+	font-size:24px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:300px;
+	padding:var(--spacing);
+}
+
+#Autre p{
+	width: 75%;
+}
