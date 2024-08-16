@@ -1,0 +1,78 @@
+#Services{
+	padding-block:var(--spacing);
+	background-color:white;
+	background-image: url('/assets/img/texture-papier-2-2.jpg');
+	/* background-blend-mode: screen; */
+}
+
+#Services > .titre{
+	font-size: var(--title1);
+	font-weight: 700;
+	text-align: center;
+	margin-block:0px;
+	padding-block:0px;
+	margin:0px;
+	padding:0px;
+}
+
+#Services .texte{
+	max-width: 600px;
+	margin:var(--spacing) auto;
+	text-align: center;
+	text-wrap:balance;
+}
+
+#Services .grille{
+	display:grid;
+	/* grid-gap:var(--spacing); */
+	max-width: 600px;
+	margin:var(--spacing) auto;
+}
+
+#Services .item{
+	padding:var(--spacing);
+}
+
+#Services .item .entete{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#Services .item .entete svg{
+	width:50px;
+	height:auto;
+}
+
+
+#Services .item .titre{
+	text-align: center;
+}
+
+#Services .item-1{
+	border-right:3px dashed black;
+	border-bottom:3px dashed black;
+}
+#Services .item-2{
+	border-bottom:3px dashed black;
+}
+
+#Services .item-3{
+	border-right:3px dashed black;
+}
+
+
+
+
+
+#Services .item-4{
+	/* border-top:3px dashed black; */
+	/* border-left:3px dashed black; */
+}
+
+@media screen and (min-width: 768px){
+	#Services .grille{
+		grid-template-columns: repeat(2,minmax(auto,1fr));
+	}
+}

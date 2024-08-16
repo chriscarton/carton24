@@ -64,15 +64,14 @@
 
 /* } */
 
-.texte{
-	font-family: 'Goudy Bookletter 1911';
-	font-size: var(--textSize);
+#Presentation .texte{
+
 	opacity:0;
 	transform:translateX(-25px);
 	transition:all 1s ease-in;
 }
 
-.texte.visible{
+#Presentation .texte.visible{
 	opacity:1;
 	transform:translateX(0px);
 }

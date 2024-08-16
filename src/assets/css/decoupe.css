@@ -10,14 +10,15 @@
 }
 */
 .decoupe{
-	display:none;
+	/* display:none; */
 	width: 100%;
 	border-top: 5px dashed black;
+	display: flex;
+	align-items: center;
 }
 
 .decoupe.visible{
-	display: flex;
-	align-items: center;
+	
 }
 
 .decoupe svg{
@@ -27,7 +28,7 @@
 	position:absolute;
 	animation: moveRight 5s linear infinite;
 	transform:translateX(-100%);
-	animation-play-state: paused;
+	/* animation-play-state: paused; */
 
 }
 

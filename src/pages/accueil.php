@@ -3,7 +3,6 @@
 		<h1 id="titrePrincipal">CHRIS CARTON</h1>
 	</section>
 	<?php 
-	require('./elements/decoupe.php'); 
 	require('./sections/accueil/intro.php'); 
 	?>
 </div>
@@ -13,15 +12,17 @@
 require('./sections/accueil/realisations.php'); 
 
 require('./sections/accueil/pub.php'); 
+require('./elements/decoupe.php'); 
+require('./sections/accueil/services.php'); 
 /*
 $texte_banniere = 'NE BOUGEZ PAS';
 require('./elements/banniere.php'); 
 
 */
 require('./sections/accueil/offre.php'); 
-require('./sections/accueil/autre.php'); 
+// require('./sections/accueil/autre.php'); 
 
-// require('./sections/accueil/cafe.php'); 
+require('./sections/accueil/cafe.php'); 
 
 /*
 $texte_banniere = 'installez-vous confortablement';

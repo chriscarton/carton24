@@ -40,10 +40,11 @@
 	<img src="/assets/img/photos/NB/<?= $photo ?>.jpg" class="portrait" alt="Portrait Chris Carton / Webdesigner">
 
 	<nav id="menuPrincipal">
-		<a href="#">Articles</a>
-		<a href="#">Offres</a>
-		<a href="#">Services</a>
-		<a href="#">Réalisations</a>
+		<a href="#Realisations">Réalisations</a>
+		<a href="#Services">Services</a>
+		<a href="#Offre">Offre</a>
+		<!-- <a href="#">Articles</a> -->
+		<!-- <a href="#">Services</a> -->
 	</nav>
 
 
