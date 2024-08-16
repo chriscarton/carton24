@@ -42,6 +42,7 @@
 
 #Offre .blabla{
 	font-size: var(--textSize);
+	/* font-family: 'Goudy Bookletter 1911'; */
 }
 
 #Offre .col-contenu{
@@ -52,10 +53,10 @@
 
 
 #Offre .col-contenu ul{
-	text-align: center;
+	text-align: left;
 	margin:var(--spacing);
 	padding:0px;
-	font-size: 20px;
+	font-size: var(--textSize2);
 	list-style-position: inside; /* Ensure dots are inside the list items */
 }
 
@@ -63,9 +64,7 @@
 	#Offre .col-contenu{
 		text-align: left;
 	}
-	#Offre .col-contenu ul{
-		text-align: left;
-	}
+
 }
 
 

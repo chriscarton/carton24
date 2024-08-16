@@ -30,6 +30,7 @@
 	--title2:clamp(36px,5vw,96px);
 	--title3:clamp(36px,3vw,64px);
 	--textSize:clamp(28px,3vw,36px);
+	--textSize2:20px;
 	--btnTextSize:clamp(18px,2vw,22px);
 	--smallTextSize:clamp(16px,1vw,24px);
 	--textShadow:5px 5px 5px rgba(0,0,0,0.25);
@@ -108,20 +109,20 @@ html{
 
 
 #zoneTitrePrincipal{
-	flex:1;
+	/* flex:1; */
 	color:black;
 	min-height:100vh;
 	display: grid;
 	place-content: center;
 	padding-block:var(--spacing);
 }
-
+/*
 @media screen and (min-width:1200px){
 	#zoneTitrePrincipal{
 		flex:initial;
 	}
 }
-
+*/
 
 #titrePrincipal{
 	flex:1;

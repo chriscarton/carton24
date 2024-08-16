@@ -27,17 +27,23 @@ $realisations = [
 	]
 ];
 ?>
-<section id="Realisations">
+<section id="Realisations" class="part">
 
-	<p class="titre">Dernières réalisations</p>
+	<p class="titre" data-animation="fadeIn">Dernières réalisations</p>
 
 	<div class="galerie">
-	<?php foreach($realisations as $key => $realisation): ?>
-		<a href="<?= htmlspecialchars($realisation['url']) ?>" class="item" target="_blank">
+	<?php 
+	$data_delay = 0000;
+	foreach($realisations as $key => $realisation): 
+		
+		?>
+		<a data-animation="fadeInDown" data-delay="<?= $data_delay ?>" href="<?= htmlspecialchars($realisation['url']) ?>" class="item" target="_blank">
 			<img src="/assets/img/realisations/<?= htmlspecialchars($key) ?>.jpg" alt="">
 			<span class="item-titre"><?= htmlspecialchars($realisation['title']) ?></span>
 		</a>
-	<?php endforeach; ?>
+	<?php 
+	$data_delay = $data_delay+500;
+	endforeach; ?>
 
 	</div>
 

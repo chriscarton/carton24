@@ -15,7 +15,7 @@
 	padding:0px;
 }
 
-#Services .texte{
+#Services > .texte{
 	max-width: 600px;
 	margin:var(--spacing) auto;
 	text-align: center;
@@ -50,16 +50,34 @@
 	text-align: center;
 }
 
-#Services .item-1{
-	border-right:3px dashed black;
-	border-bottom:3px dashed black;
+#Services .item{
+	border:5px dashed black;
+	margin:var(--spacing);
+	display:flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
-#Services .item-2{
-	border-bottom:3px dashed black;
+#Services .item .texte{
+	font-size: var(--textSize2);
+	font-family: 'Jost';
+	line-height: 1.2;
 }
+@media screen and (min-width:768px){
+	#Services .item{
+		border:0px;
+		margin:0px;
+	}
+	#Services .item-1{
+		border-right:3px dashed black;
+		border-bottom:3px dashed black;
+	}
+	#Services .item-2{
+		border-bottom:3px dashed black;
+	}
 
-#Services .item-3{
-	border-right:3px dashed black;
+	#Services .item-3{
+		border-right:3px dashed black;
+	}
 }
 
 

@@ -316,6 +316,3 @@ function caminteresse(){
 	}
 }
 
-//observerDataAnimations();
-//observerTyped();
-

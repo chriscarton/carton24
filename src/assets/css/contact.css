@@ -40,6 +40,7 @@
 	text-wrap:balance;
 	text-align: center;
 	text-shadow:var(--textShadow);
+	font-weight: 700;
 }
 
 #Contact #contactConfirmation{
