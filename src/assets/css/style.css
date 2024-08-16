@@ -5,6 +5,7 @@
 @import './decoupe.css';
 @import './pub.css';
 @import './cafe.css';
+@import './offre.css';
 @import './interactive.css';
 @import './contact.css';
 @import './carte.css';
@@ -16,8 +17,9 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	min-height: 100vh;
-	border:5px dashed orange;
 }
+
+
 
 :root{
 	--spacing:15px;

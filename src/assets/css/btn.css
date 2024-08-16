@@ -16,6 +16,7 @@ input[type=submit]
 	border:3px solid transparent;
 	transition:background 0.5s ease-out;
 }
+.btn.caminteresse.active,
 .btn:hover{
 	color:var(--golden);
 	background:white;

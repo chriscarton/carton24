@@ -305,6 +305,17 @@ function observerTyped() {
 titrePrincipal();
 observerSections();
 
+caminteresse();
+
+function caminteresse(){
+	let btn = document.querySelector('.caminteresse');
+	if(btn){
+		btn.addEventListener('click',function(){
+			btn.classList.toggle('active');
+		});
+	}
+}
+
 //observerDataAnimations();
 //observerTyped();
 

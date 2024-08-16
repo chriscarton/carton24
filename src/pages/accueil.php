@@ -16,6 +16,7 @@ $texte_banniere = 'NE BOUGEZ PAS';
 require('./elements/banniere.php'); 
 
 require('./sections/accueil/cafe.php'); 
+require('./sections/accueil/offre.php'); 
 
 
 $texte_banniere = 'installez-vous confortablement';

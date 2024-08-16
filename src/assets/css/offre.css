@@ -1,0 +1,86 @@
+#Offre{
+	border-block:1px solid white;
+	background:url('/assets/img/texture-carton-1.jpg');
+	min-height: 25vh;
+	display:flex;
+	
+	.col-titre{
+		padding:var(--spacing);
+		background:black;
+		color:white;
+		display:grid;
+		place-content: center;
+		flex:2;
+		/* font-size:clamp(36px,5vw,96px); */
+	}
+
+	.col-titre .titre{
+		/* line-height: 1.6; */
+		font-size: var(--title2);
+
+		text-wrap:balance;
+	}
+
+	.clip-triangle{
+		flex:2;
+		width: 200px;
+		background:black;
+		clip-path: polygon(0 0, 0% 100%, 100% 50%);
+	}
+
+	.blabla{
+		font-size: var(--textSize);
+	}
+
+	.col-contenu{
+		flex:8;
+		ul{
+
+			margin:var(--spacing);
+			padding:0px;
+			font-size: 20px;
+		}
+		ul li{
+			line-height: 1.6;
+		}
+	}
+
+	.col-contenu .titre{
+		font-size: var(--title2);
+		color:white;
+		/* max-width: 450px; */
+	}
+
+
+	.col-titre .titre{
+		text-align: center;
+	}
+
+	.col-contenu{
+		padding:var(--spacing);
+		display:grid;
+		place-content: center;
+	}
+
+	.btn-container{
+		padding-bottom:var(--spacing);
+	}
+	.btn-container .btn{
+		text-transform: none;
+	}
+
+}
+
+#Autres{
+	font-family: 'Goudy Bookletter 1911';
+	font-size:24px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:300px;
+	padding:var(--spacing);
+}
+
+#Autres p{
+	width: 75%;
+}
