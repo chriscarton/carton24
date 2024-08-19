@@ -1,7 +1,7 @@
 <?php
 function generateServiceItem($service, $index) {
 	?>
-	<div class="item item-<?php echo $index + 1; ?>" data-animation="fadeIn" data-delay="<?= $service['delay'] ?>">
+	<div class="item item-<?php echo $index + 1; ?>">
 		<div class="entete">
 			<?php require($service['icon']); ?>
 			<h2 class="titre"><?php echo $service['title']; ?></h2>
@@ -27,7 +27,7 @@ $services = [
 	[
 		'title' => 'Dépannage et maintenance',
 		'icon'=>'./assets/svg/construction.svg',
-		'description' => "Je réalise la maintenance de votre site internet pour qu'il soit toujours au top ! J'inverviens avec réactivité en cas de problème !",
+		'description' => "Je réalise la maintenance de votre site internet pour qu'il soit toujours au top ! J'interviens avec réactivité en cas de problème !",
 		'delay'=>'2000'
 	],
 	[
@@ -40,11 +40,11 @@ $services = [
 ];
 ?>
 
-<section id="Services" class="part">
+<section id="Services">
 
-	<h1 class="titre" data-animation="fadeInUp">Mes services</h1>
+	<h1 class="titre" >Mes services</h1>
 
-	<p class="texte" data-animation="fadeIn" data-delay="500">
+	<p class="texte">
 		Je conçois et réalise votre site internet de A à Z. J'assure également une continuité entre tous vos supports de communication&nbsp;!
 	</p>
 

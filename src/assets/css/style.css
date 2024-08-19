@@ -1,3 +1,5 @@
+@import './tarifs.css';
+
 @import './animations.css';
 @import './intro.css';
 @import './realisations.css';
@@ -13,14 +15,6 @@
 @import './carte.css';
 @import './footer.css';
 @import './fonts.css';
-
-#footerZone{
-	display:flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	min-height: 100vh;
-}
-
 
 
 :root{

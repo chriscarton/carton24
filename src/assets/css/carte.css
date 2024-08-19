@@ -3,15 +3,15 @@
 	background-repeat:repeat;
 	position:relative;
 	background-size:100px;
-	/* min-height: 50vh; */
 	display:grid;
 	place-items: center;
 	flex:1;
+	min-height: 100vh;
 }
 
 @media screen and (min-width:768px){
 	#Carte{
-		/* min-height: 100vh; */
+		min-height:auto;
 		background-size:200px;
 	}
 }

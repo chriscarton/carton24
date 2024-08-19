@@ -2,7 +2,6 @@
 	padding-block:var(--spacing);
 	background-color:white;
 	background-image: url('/assets/img/texture-papier-2-2.jpg');
-	/* background-blend-mode: screen; */
 }
 
 #Services > .titre{
@@ -16,17 +15,28 @@
 }
 
 #Services > .texte{
-	max-width: 600px;
 	margin:var(--spacing) auto;
 	text-align: center;
 	text-wrap:balance;
 }
 
 #Services .grille{
-	display:grid;
-	/* grid-gap:var(--spacing); */
-	max-width: 600px;
 	margin:var(--spacing) auto;
+}
+
+@media screen and (min-width:768px){
+
+	#Services .grille{
+		display:grid;
+		grid-template-columns: repeat(2,minmax(auto,1fr));
+
+	}
+
+	#Services > .texte,
+	#Services .grille{
+			max-width: 600px;
+	}
+
 }
 
 #Services .item{
@@ -77,20 +87,5 @@
 
 	#Services .item-3{
 		border-right:3px dashed black;
-	}
-}
-
-
-
-
-
-#Services .item-4{
-	/* border-top:3px dashed black; */
-	/* border-left:3px dashed black; */
-}
-
-@media screen and (min-width: 768px){
-	#Services .grille{
-		grid-template-columns: repeat(2,minmax(auto,1fr));
 	}
 }
