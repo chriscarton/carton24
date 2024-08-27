@@ -1,4 +1,6 @@
-<?php require('./sections/accueil/tarifs.php'); ?>
+<?php 
+//require('./sections/accueil/tarifs.php'); 
+?>
 <div id="Accueil">
 	<section id="zoneTitrePrincipal">
 		<h1 id="titrePrincipal">CHRIS CARTON</h1>
